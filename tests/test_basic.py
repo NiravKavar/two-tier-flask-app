@@ -1,4 +1,7 @@
-def test_addition():
-    a = 3
-    b = 2
-    assert a + b == 5
+a = 3
+b = 2
+
+if a + b != 5:
+    raise Exception("Static test failed")
+
+print("Static test passed")

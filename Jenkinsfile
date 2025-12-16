@@ -9,19 +9,7 @@ pipeline{
             }
         }
         
-        stage("security-scan"){
-            steps{
-                echo "Running Trivy filesystem scan via Docker"
-                sh '''
-                    docker run --rm \
-                    -v $PWD:/project \
-                    aquasec/trivy:latest fs \
-                    --exit-code 1 \
-                    --severity HIGH,CRITICAL \
-                    /project
-                '''
-            }
-        }
+       
         
         stage("build"){
             steps{

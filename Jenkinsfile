@@ -5,7 +5,7 @@ pipeline{
             steps{
                 echo "code clone start"
                 git url:"https://github.com/NiravKavar/two-tier-flask-app.git", branch:"dev"
-                echo "code clone end ho gaya"
+                echo "code clone end ho gaya "
             }
         }
         
